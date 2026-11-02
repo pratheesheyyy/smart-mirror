@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Mirror — Final Year Project | Pratheesh VP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="degree-tag">B.Tech Final Year Project &mdash; Computer Science &amp; Engineering</p>
+      <h1>Smart Mirror</h1>
+      <p class="tagline">An IoT-Based Interactive Information Display System Powered by Raspberry Pi</p>
+      <div class="header-meta">
+        <span>Pratheesh VP &nbsp;(STI19CS033)</span>
+        <span class="sep">|</span>
+        <span>ST Thomas Institute for Science and Technology, Trivandrum</span>
+        <span class="sep">|</span>
+        <span>APJ Abdul Kalam Technological University</span>
+      </div>
+      <div class="header-meta" style="margin-top:0.35rem">
+        <span>Guide: Mrs. Divya Susan Mathew, Asst. Professor, Dept. of CSE</span>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#about">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#software">Software</a>
+      <a href="#report">Report</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── Overview ── -->
+    <section id="about">
+      <div class="section-label">01 &mdash; Overview</div>
+      <h2>Project Overview</h2>
+      <p>
+        The Smart Mirror is an IoT-based embedded system that integrates traditional mirror functionality
+        with real-time computing and internet capabilities. Built on a <strong>Raspberry Pi 3</strong>
+        running Raspbian Linux, the device overlays a 19-inch LCD display behind a one-way reflective
+        mirror film, enabling users to access live information hands-free during their daily routine.
+      </p>
+      <p>
+        The project addresses a practical problem: individuals lose time during morning routines
+        switching between a mirror and their phones or tablets to check weather, news, and schedules.
+        The Smart Mirror eliminates this friction by unobtrusively displaying relevant data on the
+        sides and corners of the reflective surface, keeping the central reflection clear for use.
+      </p>
+      <div class="highlight-box">
+        <strong>Objective:</strong> Design and implement an interactive smart mirror system that provides
+        real-time information — time, date, weather, news, and notifications — through voice commands
+        and facial recognition, with minimal user effort.
+      </div>
+    </section>
+
+    <!-- ── Features ── -->
+    <section id="features">
+      <div class="section-label">02 &mdash; Features</div>
+      <h2>Key Features</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-tag">Display</div>
+          <h3>Time &amp; Date</h3>
+          <p>Real-time clock and calendar display, continuously updated via internet connectivity.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Display</div>
+          <h3>Weather Forecast</h3>
+          <p>Live weather conditions and forecasts fetched from weather APIs based on the device's configured location.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Display</div>
+          <h3>News Feed</h3>
+          <p>Latest headlines and news articles retrieved via news APIs and displayed on the mirror surface.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Interaction</div>
+          <h3>Voice Control</h3>
+          <p>Hands-free voice command interface via a built-in microphone, allowing users to interact with the mirror without touch.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Display</div>
+          <h3>Notifications</h3>
+          <p>Displays notifications from a connected Android device on the mirror surface, keeping the user informed during their routine.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">AI</div>
+          <h3>Voice Assistant</h3>
+          <p>Integrated personal assistant capable of answering web queries and performing tasks beyond the standard display widgets via voice.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Hardware ── -->
+    <section id="hardware">
+      <div class="section-label">03 &mdash; Hardware</div>
+      <h2>Hardware Architecture</h2>
+      <p>
+        The physical build integrates off-the-shelf components into an aesthetically clean, wall-mountable
+        form factor. Key design constraints included weight, heat dissipation, mirror-to-screen alignment,
+        and moisture resistance for bathroom environments.
+      </p>
+      <div class="spec-table">
+        <div class="spec-row header-row">
+          <span>Component</span>
+          <span>Specification / Role</span>
+        </div>
+        <div class="spec-row">
+          <span>Raspberry Pi 3</span>
+          <span>Central processing unit — 1.2 GHz quad-core ARM Cortex-A53, 1 GB RAM, running Raspbian Linux</span>
+        </div>
+        <div class="spec-row">
+          <span>LCD Display</span>
+          <span>19-inch panel providing the information overlay; anti-glare, high-resolution, energy-efficient</span>
+        </div>
+        <div class="spec-row">
+          <span>One-Way Mirror Film</span>
+          <span>Maintains reflectivity when display is off; allows display content to show through when on</span>
+        </div>
+        <div class="spec-row">
+          <span>Microphone</span>
+          <span>USB microphone for voice command capture — wide frequency response, moisture-resistant</span>
+        </div>
+        <div class="spec-row">
+          <span>SD Card (16 GB)</span>
+          <span>Storage for Raspbian OS, application code, and user profile data</span>
+        </div>
+        <div class="spec-row">
+          <span>Power Supply</span>
+          <span>5V micro-USB regulated supply integrated into the mirror frame</span>
+        </div>
+        <div class="spec-row">
+          <span>Mirror Frame</span>
+          <span>Custom wooden frame housing all components with cable management</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Software ── -->
+    <section id="software">
+      <div class="section-label">04 &mdash; Software</div>
+      <h2>Software Architecture</h2>
+      <p>
+        The software stack runs entirely on the Raspberry Pi under Raspbian Linux. The system is modular:
+        each widget (clock, weather, news, calendar) is an independent, hot-swappable module. The
+        Raspberry Pi connects to the internet over Wi-Fi to fetch live data from external APIs.
+      </p>
+      <div class="two-col">
+        <div>
+          <h3 class="sub-heading">Technologies Used</h3>
+          <ul>
+            <li><strong>Python</strong> — core application logic, API integration, voice recognition pipeline</li>
+            <li><strong>MagicMirror² Framework</strong> — modular UI rendered in a fullscreen Chromium window</li>
+            <li><strong>Electron / Node.js</strong> — widget runtime and inter-process communication</li>
+            <li><strong>OpenCV</strong> — facial recognition and presence detection via camera feed</li>
+            <li><strong>Google Assistant API</strong> — natural language voice command processing</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-heading">External APIs</h3>
+          <ul>
+            <li><strong>OpenWeatherMap API</strong> — real-time weather and forecast data</li>
+            <li><strong>News API</strong> — live headline and article feeds</li>
+            <li><strong>Google Calendar API</strong> — calendar events and reminders</li>
+            <li><strong>Wi-Fi Module</strong> (built-in RPi 3) — seamless internet connectivity</li>
+          </ul>
+        </div>
+      </div>
+      <div class="highlight-box" style="margin-top:1.5rem">
+        <strong>Key Challenge:</strong> Achieving reliable voice recognition under ambient environmental
+        noise. The microphone sensitivity and voice recognition package were iteratively calibrated;
+        overclocking the Raspberry Pi processor resolved response latency issues encountered during testing.
+      </div>
+    </section>
+
+    <!-- ── Report ── -->
+    <section id="report">
+      <div class="section-label">05 &mdash; Report</div>
+      <h2>Project Report</h2>
+      <p>The full project report (60 pages) is available to read below or download as a PDF.</p>
+      <div class="pdf-actions">
+        <a class="btn" href="pratheesh_main_report.pdf" download>Download Report (PDF)</a>
+      </div>
+      <div class="pdf-embed">
+        <iframe src="pratheesh_main_report.pdf" title="Smart Mirror Project Report"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Pratheesh VP &nbsp;&bull;&nbsp; B.Tech Computer Science &amp; Engineering</p>
+      <p>ST Thomas Institute for Science and Technology &nbsp;&bull;&nbsp; APJ Abdul Kalam Technological University &nbsp;&bull;&nbsp; 2023</p>
+    </div>
+  </footer>
+
+</body>
+</html>
