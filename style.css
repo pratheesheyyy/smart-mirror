@@ -157,6 +157,8 @@ section p {
   color: var(--text);
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 section ul {
@@ -234,6 +236,8 @@ section ul li::before {
   color: var(--text-dim);
   line-height: 1.6;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* ── Spec Table ── */
